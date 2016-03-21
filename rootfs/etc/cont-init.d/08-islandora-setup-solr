@@ -1,0 +1,13 @@
+#!/usr/bin/execlineb -P
+# -*- mode: sh -*-
+# vi: set ft=sh:
+with-contenv
+multisubstitute
+{
+    import -i SOLR_HOST
+    import -i SOLR_HOST_PORT
+}
+# This will eventually be replaced with alterations to the install profile such
+# that conf generated for settings.php contains the required info for the apache
+# Solr module to setup itself during the site install.
+drush sqlq "update apachesolr_environment set url='http://${SOLR_HOST}:${SOLR_HOST_PORT}/solr'"

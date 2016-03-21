@@ -1,0 +1,25 @@
+#!/usr/bin/execlineb -P
+# -*- mode: sh -*-
+# vi: set ft=sh:
+with-contenv
+multisubstitute
+{
+    # User can override linked container settings,
+    # otherwise it will default to the linked container.
+    import -D "solr" SOLR_HOST
+    import -D "8080" SOLR_HOST_PORT
+    import -D "tcp://fedora:61613" JMS_BROKER_URL
+    import -D "http://karaf:8181" KARAF_URL
+}
+foreground {
+    # We add / update the environment defined for the container,
+    # this allows our other initialization and service scripts
+    # use these settings; but does not change the existing
+    # enviroment as seen by linked containers.
+    s6-env -i
+    SOLR_HOST=$SOLR_HOST
+    SOLR_HOST_PORT=$SOLR_HOST_PORT
+    JMS_BROKER_URL=$JMS_BROKER_URL
+    KARAF_URL=$KARAF_URL
+    s6-dumpenv -- /var/run/s6/container_environment
+}

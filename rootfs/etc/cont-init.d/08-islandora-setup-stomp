@@ -1,0 +1,12 @@
+#!/usr/bin/execlineb -P
+# -*- mode: sh -*-
+# vi: set ft=sh:
+with-contenv
+multisubstitute
+{
+    import -i JMS_BROKER_URL
+}
+# This will eventually be replaced with alterations to the install profile such
+# that conf generated for settings.php contains the required info for the stomp
+# to be configured correctly.
+drush vset islandora_stomp_url ${JMS_BROKER_URL}

@@ -1,0 +1,12 @@
+#!/usr/bin/execlineb -P
+# -*- mode: sh -*-
+# vi: set ft=sh:
+with-contenv
+multisubstitute
+{
+    import -i KARAF_URL
+}
+# This will eventually be replaced with alterations to the install profile such
+# that conf generated for settings.php contains the required info for the Karaf
+# to be configured correctly.
+drush vset islandora_karaf_url ${KARAF_URL}
