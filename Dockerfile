@@ -1,7 +1,7 @@
 FROM islandora-claw/drupal
 MAINTAINER Nigel Banks <nigel.g.banks@gmail.com>
 
-LABEL "License"="GPLv3" \
+LABEL "License"="MIT" \
       "Version"="0.0.1"
 
 ENV DRUPAL_SITE_INSTALL_PROFILE="claw_install_profile"
