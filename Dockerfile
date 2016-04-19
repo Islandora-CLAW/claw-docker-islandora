@@ -1,4 +1,4 @@
-FROM islandora-claw/drupal
+FROM islandora/claw-drupal
 MAINTAINER Nigel Banks <nigel.g.banks@gmail.com>
 
 LABEL "License"="MIT" \
