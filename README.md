@@ -1,9 +1,9 @@
 # Islandora CLAW: Islandora Docker Image
 
-[![Docker Stars](https://img.shields.io/docker/stars/islandora-claw/islandora.svg)](https://hub.docker.com/r/islandora-claw/islandora/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/islandora-claw/islandora.svg)](https://hub.docker.com/r/islandora-claw/islandora/)
-[![Image Size](https://img.shields.io/imagelayers/image-size/islandora-claw/islandora/latest.svg)](https://imagelayers.io/?images=islandora-claw/islandora:latest)
-[![Image Layers](https://img.shields.io/imagelayers/layers/islandora-claw/islandora/latest.svg)](https://imagelayers.io/?images=islandora-claw/islandora:latest)
+[![Docker Stars](https://img.shields.io/docker/stars/islandora/claw-islandora.svg)](https://hub.docker.com/r/islandora/claw-islandora/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/islandora/claw-islandora.svg)](https://hub.docker.com/r/islandora/claw-islandora/)
+[![Image Size](https://img.shields.io/imagelayers/image-size/islandora/claw-islandora/latest.svg)](https://imagelayers.io/?images=islandora/claw-islandora:latest)
+[![Image Layers](https://img.shields.io/imagelayers/layers/islandora/claw-islandora/latest.svg)](https://imagelayers.io/?images=islandora/claw-islandora:latest)
 
 ### Introduction
 
@@ -25,7 +25,7 @@ No build arguments are provided.
 
 **Example:**
 ```bash
-docker build -t islandora-claw/islandora .
+docker build -t islandora/claw-islandora .
 ```
 
 ### Environment Variables
@@ -62,7 +62,7 @@ docker run --rm -ti -P  \
                     -e "MYSQL_ROOT_PASSWORD=your_super_secure_password" \
                     -e "DRUPAL_SITE_ACCOUNT_PASSWORD=your_super_secure_password" \
                     -e "DRUPAL_SITE_DB_PASSWORD=your_super_secure_password" \
-                    islandora-claw/drupal ash
+                    islandora/claw-drupal ash
 ```
 
 ### Notes
