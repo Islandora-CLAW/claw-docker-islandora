@@ -27,10 +27,10 @@ RUN curl -L https://github.com/Islandora-CLAW/claw_install_profile/archive/maste
 
 # This is a temporary measure until we split up the repo into sub-modules.
 # We will eventually make it part of the drush make file like everything else.
-RUN git clone https://github.com/Islandora-CLAW/CLAW.git /opt/claw && \
-    ln -s /opt/claw/drupal ${DRUPAL_ROOT}/sites/all/modules/islandora && \
-    chmod -R a+rx /opt/claw && \
-    chown -R apache:apache /opt/claw/drupal && \
-    chmod -R g+rw /opt/claw
+RUN git clone https://github.com/Islandora-CLAW/islandora.git /opt/islandora && \
+    ln -s /opt/islandora ${DRUPAL_ROOT}/sites/all/modules/islandora && \
+    chmod -R a+rx /opt/islandora && \
+    chown -R apache:apache /opt/islandora && \
+    chmod -R g+rw /opt/islandora
 
 COPY rootfs /
